@@ -1,5 +1,6 @@
 package com.bupt.dao.mapper;
 
+import com.bupt.dao.handler.SchedualRruModelHandler;
 import com.bupt.model.Bbu;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Result;
@@ -20,7 +21,10 @@ public interface BbuMapper {
     @Result(property = "vlng", column = "Y"),
     @Result(property = "vZ", column = "Z"),
     @Result(property = "vRruNum", column = "RruNum"),
-    @Result(property = "vSchedualRruMode", column = "SchedualRruMode"),
+    @Result(
+        property = "vSchedualRruMode",
+        column = "SchedualRruMode",
+        typeHandler = SchedualRruModelHandler.class),
     @Result(property = "vTransPower", column = "TransPower"),
     @Result(property = "vEquipPower", column = "EquipPower"),
     @Result(property = "vIsActivity", column = "IsActivity"),

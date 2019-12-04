@@ -1,14 +1,16 @@
 package com.bupt.model;
 
+import com.bupt.common.enums.SchedualRruMode;
+
 import java.io.Serializable;
 
 public class Bbu implements Serializable {
-  private Integer network_id = (int)Math.random()*20;
+  private Integer network_id = (int) Math.random() * 20;
   private Integer id; /*BBU的编号*/
   private Integer vBbuPoolId; /*BBU Pool的Id*/
   private Double vlat, vlng, vZ; /*地理坐标*/
   private Integer vRruNum; /*服务的RRU数量*/
-  private Integer vSchedualRruMode; /*RRU资源调度的方式*/
+  private SchedualRruMode vSchedualRruMode; /*RRU资源调度的方式*/
   private Double vTransPower; /*传输功率dbm形式*/
   private Double vEquipPower; /*设备能耗*/
   private Integer vIsActivity; /*状态*/
@@ -36,7 +38,7 @@ public class Bbu implements Serializable {
       Double vlng,
       Double vZ,
       Integer vRruNum,
-      Integer vSchedualRruMode,
+      SchedualRruMode vSchedualRruMode,
       Double vTransPower,
       Double vEquipPower,
       Integer vIsActivity,
@@ -112,14 +114,6 @@ public class Bbu implements Serializable {
 
   public void setvRruNum(Integer vRruNum) {
     this.vRruNum = vRruNum;
-  }
-
-  public Integer getvSchedualRruMode() {
-    return vSchedualRruMode;
-  }
-
-  public void setvSchedualRruMode(Integer vSchedualRruMode) {
-    this.vSchedualRruMode = vSchedualRruMode;
   }
 
   public Double getvTransPower() {
@@ -200,5 +194,13 @@ public class Bbu implements Serializable {
 
   public void setvSupportMec(Boolean vSupportMec) {
     this.vSupportMec = vSupportMec;
+  }
+
+  public SchedualRruMode getvSchedualRruMode() {
+    return vSchedualRruMode;
+  }
+
+  public void setvSchedualRruMode(SchedualRruMode vSchedualRruMode) {
+    this.vSchedualRruMode = vSchedualRruMode;
   }
 }
