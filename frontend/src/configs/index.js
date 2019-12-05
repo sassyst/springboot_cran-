@@ -1,9 +1,9 @@
 import OrderIcon from '@material-ui/icons/AttachMoney';
-import BbuPoolList from "./BbuPoolList";
+import ConfigList from "./ConfigList";
 
 
 export default {
-    list: BbuPoolList,
+    list: ConfigList,
     // edit: OrderEdit,
     icon: OrderIcon,
 };

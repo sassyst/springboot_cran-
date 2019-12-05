@@ -1,5 +1,5 @@
 import React from 'react';
-import {Datagrid, DateField, DateInput, Filter, List, NullableBooleanInput, SearchInput, TextField,} from 'react-admin';
+import {Datagrid, DateField, DateInput, Filter, List, SearchInput, TextField,} from 'react-admin';
 import {makeStyles} from '@material-ui/core';
 import ColoredNumberField from './ColoredNumberField';
 import CustomerLinkField from "./CustomerLinkField";
@@ -8,8 +8,6 @@ const NetworkFilter = props => (
     <Filter {...props}>
         <SearchInput source="id" alwaysOn/>
         <DateInput source="create_date"/>
-        <NullableBooleanInput source="has_run"/>
-        <NullableBooleanInput source="has_coll" defaultValue/>
     </Filter>
 );
 
@@ -62,11 +60,17 @@ const VisitorList = props => {
                     label="resources.network.fields.MecServerNum"
                     className={classes.nb_commands}
                 />
-                <TextField
-                    source="des"
-                    label="resources.network.fields.MecServerNum"
+                <ColoredNumberField
+                    source="linkNum"
+                    label="链路数"
                     className={classes.nb_commands}
                 />
+                <TextField
+                    // source="des"
+                    label="resources.network.fields.des"
+                    className={classes.nb_commands}
+                />
+
             </Datagrid>
         </List>
     );

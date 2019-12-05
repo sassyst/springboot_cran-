@@ -14,6 +14,7 @@ const Menu = ({onMenuClick, dense, logout}) => {
         menuParams: false,
         menucurrNetwork: false,
         menucurrLink: false,
+        menuSystem: false
     });
     const translate = useTranslate();
     const isXsmall = useMediaQuery(theme => theme.breakpoints.down('xs'));
@@ -30,29 +31,17 @@ const Menu = ({onMenuClick, dense, logout}) => {
             <DashboardMenuItem primaryText={translate(`pos.menu.dashboard`, {
                 smart_count: 2,
             })} onClick={onMenuClick} sidebarIsOpen={open}/>
-            {/*网络实例管理*/}
-            <MenuItemLink
-                to={`/networks`}
-                primaryText={translate(`resources.network.name`, {
-                    smart_count: 2,
-                })}
-                leftIcon={<visitors.icon/>}
-                onClick={onMenuClick}
-                sidebarIsOpen={open}
-                dense={dense}
-            />
-            {/*网络设备管理*/}
             <SubMenu
-                handleToggle={() => handleToggle('menuNetwork')}
-                isOpen={state.menuNetwork}
+                handleToggle={() => handleToggle('menuSystem')}
+                isOpen={state.menuSystem}
                 sidebarIsOpen={open}
-                name="pos.menu.network"
+                name="系统维护"
                 icon={<visitors.icon/>}
                 dense={dense}
             >
                 <MenuItemLink
-                    to={`/bbus`}
-                    primaryText={translate(`resources.bbus.name`, {
+                    to={`/networks`}
+                    primaryText={translate(`resources.network.name`, {
                         smart_count: 2,
                     })}
                     leftIcon={<visitors.icon/>}
@@ -61,8 +50,8 @@ const Menu = ({onMenuClick, dense, logout}) => {
                     dense={dense}
                 />
                 <MenuItemLink
-                    to={`/bbupools`}
-                    primaryText={translate(`resources.bbupools.name`, {
+                    to={`/configs`}
+                    primaryText={translate(`pos.menu.params`, {
                         smart_count: 2,
                     })}
                     leftIcon={<visitors.icon/>}
@@ -70,54 +59,83 @@ const Menu = ({onMenuClick, dense, logout}) => {
                     sidebarIsOpen={open}
                     dense={dense}
                 />
-                <MenuItemLink
-                    to={`/ues`}
-                    primaryText={translate(`resources.ues.name`, {
-                        smart_count: 2,
-                    })}
-                    leftIcon={<visitors.icon/>}
-                    onClick={onMenuClick}
+                <SubMenu
+                    handleToggle={() => handleToggle('menuNetwork')}
+                    isOpen={state.menuNetwork}
                     sidebarIsOpen={open}
+                    name="pos.menu.network"
+                    icon={<visitors.icon/>}
                     dense={dense}
-                />
-                <MenuItemLink
-                    to={`/ues`}
-                    primaryText={translate(`resources.mecservers.name`, {
-                        smart_count: 2,
-                    })}
-                    leftIcon={<visitors.icon/>}
-                    onClick={onMenuClick}
-                    sidebarIsOpen={open}
-                    dense={dense}
-                />
-                <MenuItemLink
-                    to={`/ues`}
-                    primaryText={translate(`resources.links.name`, {
-                        smart_count: 2,
-                    })}
-                    leftIcon={<visitors.icon/>}
-                    onClick={onMenuClick}
-                    sidebarIsOpen={open}
-                    dense={dense}
-                />
+                >
+                    <MenuItemLink
+                        to={`/bbus`}
+                        primaryText={translate(`resources.bbus.name`, {
+                            smart_count: 2,
+                        })}
+                        leftIcon={<visitors.icon/>}
+                        onClick={onMenuClick}
+                        sidebarIsOpen={open}
+                        dense={dense}
+                    />
+                    <MenuItemLink
+                        to={`/bbupools`}
+                        primaryText={translate(`resources.bbupools.name`, {
+                            smart_count: 2,
+                        })}
+                        leftIcon={<visitors.icon/>}
+                        onClick={onMenuClick}
+                        sidebarIsOpen={open}
+                        dense={dense}
+                    />
+                    <MenuItemLink
+                        to={`/ues`}
+                        primaryText={translate(`resources.ues.name`, {
+                            smart_count: 2,
+                        })}
+                        leftIcon={<visitors.icon/>}
+                        onClick={onMenuClick}
+                        sidebarIsOpen={open}
+                        dense={dense}
+                    />
+                    <MenuItemLink
+                        to={`/ues`}
+                        primaryText={translate(`resources.mecservers.name`, {
+                            smart_count: 2,
+                        })}
+                        leftIcon={<visitors.icon/>}
+                        onClick={onMenuClick}
+                        sidebarIsOpen={open}
+                        dense={dense}
+                    />
+                    <MenuItemLink
+                        to={`/ues`}
+                        primaryText={translate(`resources.links.name`, {
+                            smart_count: 2,
+                        })}
+                        leftIcon={<visitors.icon/>}
+                        onClick={onMenuClick}
+                        sidebarIsOpen={open}
+                        dense={dense}
+                    />
+                </SubMenu>
             </SubMenu>
-            {/*场景参数管理*/}
+
             <MenuItemLink
-                to={`/ues`}
-                primaryText={translate(`pos.menu.params`, {
-                    smart_count: 2,
-                })}
+                to={`/index`}
+                primaryText="仿真运行"
                 leftIcon={<visitors.icon/>}
                 onClick={onMenuClick}
                 sidebarIsOpen={open}
                 dense={dense}
             />
+            {/*网络实例管理*/}
+
             {/*当前网络部署情况*/}
             <SubMenu
                 handleToggle={() => handleToggle('menucurrNetwork')}
                 isOpen={state.menucurrNetwork}
                 sidebarIsOpen={open}
-                name="pos.menu.current_network"
+                name="网元列表"
                 icon={<visitors.icon/>}
                 dense={dense}
             >
@@ -177,7 +195,7 @@ const Menu = ({onMenuClick, dense, logout}) => {
                 handleToggle={() => handleToggle('menucurrLink')}
                 isOpen={state.menucurrLink}
                 sidebarIsOpen={open}
-                name="pos.menu.current_link"
+                name="链路列表"
                 icon={<visitors.icon/>}
                 dense={dense}
             >
@@ -234,14 +252,13 @@ const Menu = ({onMenuClick, dense, logout}) => {
             </SubMenu>
             <MenuItemLink
                 to={`/ues`}
-                primaryText={translate(`pos.menu.current_params`, {
-                    smart_count: 2,
-                })}
+                primaryText="MEC服务器列表"
                 leftIcon={<visitors.icon/>}
                 onClick={onMenuClick}
                 sidebarIsOpen={open}
                 dense={dense}
             />
+
             {isXsmall && (
                 <MenuItemLink
                     to="/configuration"

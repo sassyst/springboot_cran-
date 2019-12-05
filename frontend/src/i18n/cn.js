@@ -38,7 +38,7 @@ export default {
             current_network: '当前网络部署情况',
             current_link: '当前网络链路情况',
             current_params: '当前仿真场景参数',
-            dashboard: "仿真运行面板"
+            dashboard: "首页"
 
         },
     },

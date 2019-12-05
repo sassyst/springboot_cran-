@@ -2,10 +2,7 @@ package com.bupt.dao.mapper;
 
 import com.bupt.dao.handler.SchedualRruModelHandler;
 import com.bupt.model.Bbu;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -37,4 +34,10 @@ public interface BbuMapper {
     @Result(property = "vSupportMec", column = "SupportMec"),
   })
   List<Bbu> getAll();
+
+  @Select("SELECT * FROM Bbu Where network_id = #{network_id}")
+  List<Bbu> getAllbyNetworkId(@Param("network_id") int network_id);
+
+  @Select("SELECT * FROM Bbu Where BbuId = #{id}")
+  Bbu getOne(@Param("id") int id);
 }

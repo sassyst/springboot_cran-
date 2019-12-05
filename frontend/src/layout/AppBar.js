@@ -47,7 +47,7 @@ const CustomAppBar = props => {
                 className={classes.title}
                 id="react-admin-title"
             />
-            <Logo />
+            <p>C-RAN环境下的移动边缘计算仿真计算平台</p>
             <span className={classes.spacer} />
         </AppBar>
     );

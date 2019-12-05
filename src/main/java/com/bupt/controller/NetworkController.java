@@ -18,7 +18,6 @@ public class NetworkController {
 
   @GetMapping("/api/networks/{id}")
   public ResponseEntity<Object> getById(@PathVariable("id") int id) {
-    System.out.println("getById");
     User tan = new User();
     tan.setUserName("tanjin");
     tan.setAvatar("https://s3.amazonaws.com/uifaces/faces/twitter/petar_prog/128.jpg");
