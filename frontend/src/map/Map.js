@@ -1,10 +1,10 @@
 import React from "react";
 import {Map, Markers, Polyline} from 'react-amap';
-import ueImg from './mapicon/Ue.png';
-import bbuImg from './mapicon/Bbu.png';
-import rruImg from './mapicon/Rru.png'
-import bbuPool from './mapicon/BbuPool.png'
-import mecServer from './mapicon/mec.png'
+import ueImg from './mapicon/Old-Mobile-icon.png';
+import bbuImg from './mapicon/server-icon.png';
+import rruImg from './mapicon/satellite-Vista-icon.png'
+import bbuPool from './mapicon/database.svg'
+import mecServer from './mapicon/cloud-computing.png'
 import allmarkers from '../data/network_demo'
 
 const styles = {
@@ -19,56 +19,56 @@ function TuoPuMap({tti, run_state}) {
         background: `url(${mecServer})`,
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'right',
-        width: '100px',
-        height: '100px',
-        textAlign: 'button',
-        color: 'red',
-        fontSize: '30px'
+        backgroundPosition: 'center',
+        width: '80px',
+        height: '80px',
+        textAlign: 'left',
+        color: 'black',
+        fontSize: '20px'
     };
     const styleUe = {
         background: `url(${ueImg})`,
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'right',
+        backgroundPosition: 'center',
         width: '30px',
-        height: '50px',
-        textAlign: 'button',
-        color: 'red',
-        fontSize: '10px'
+        height: '30px',
+        textAlign: 'left',
+        color: 'black',
+        fontSize: '15px'
     };
     const styleBbu = {
         background: `url(${bbuImg})`,
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'right',
-        width: '50px',
-        height: '60px',
-        textAlign: 'button',
-        color: 'red',
-        fontSize: '10px',
+        backgroundPosition: 'center',
+        width: '40px',
+        height: '50px',
+        textAlign: 'left',
+        color: 'black',
+        fontSize: '15px',
     };
     const styleRru = {
         background: `url(${rruImg})`,
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'right',
-        width: '70px',
-        height: '70px',
-        textAlign: 'button',
-        color: 'red',
-        fontSize: '10px'
+        backgroundPosition: 'center',
+        width: '40px',
+        height: '50px',
+        textAlign: 'left',
+        color: 'black',
+        fontSize: '15px'
     };
     const styleBbuPool = {
         background: `url(${bbuPool})`,
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'right',
-        width: '50px',
+        backgroundPosition: 'center',
+        width: '60px',
         height: '60px',
-        textAlign: 'button',
-        color: 'red',
-        fontSize: '10px',
+        textAlign: 'left',
+        color: 'black',
+        fontSize: '20px',
     };
     const ueNum = 30;
     const BbuNum = 7;
@@ -179,7 +179,8 @@ function TuoPuMap({tti, run_state}) {
         paths.push([bbuMarkers[i].position, bbupoolMarkers[bbuMarkers[i].bbupool_id].position]);
     }
 
-
+    const strokeColor = "#fff";
+    const strokeWeight = 0.5;
     return (
         <Map style={{height: 400}} useAMapUI={true} amapkey={'819d0e1d0c88bb8de67a4b8949e2597a'} plugins={['ToolBar']}
              zoom={14}>
@@ -195,7 +196,15 @@ function TuoPuMap({tti, run_state}) {
                 paths.map(record => (
                     <Polyline
                         path={record}
-                        visible={true}/>
+                        visible={true}
+                        showDir={true}
+                        style={{
+                            strokeColor: " #3399ff",
+                            strokeWeight: 1,
+                            geodesic: true,
+                            strokeStyle: "dashed"
+                        }}
+                    />
                 ))
             }
         </Map>

@@ -1,10 +1,8 @@
-import React, { forwardRef } from 'react';
-import { AppBar, UserMenu, MenuItemLink, useTranslate } from 'react-admin';
+import React, {forwardRef} from 'react';
+import {AppBar, MenuItemLink, UserMenu, useTranslate} from 'react-admin';
 import Typography from '@material-ui/core/Typography';
 import SettingsIcon from '@material-ui/icons/Settings';
-import { makeStyles } from '@material-ui/core/styles';
-
-import Logo from './Logo';
+import {makeStyles} from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
     title: {
@@ -25,7 +23,7 @@ const ConfigurationMenu = forwardRef((props, ref) => {
             ref={ref}
             to="/configuration"
             primaryText={translate('pos.configuration')}
-            leftIcon={<SettingsIcon />}
+            leftIcon={<SettingsIcon/>}
             onClick={props.onClick}
         />
     );
@@ -33,22 +31,22 @@ const ConfigurationMenu = forwardRef((props, ref) => {
 
 const CustomUserMenu = props => (
     <UserMenu {...props}>
-        <ConfigurationMenu />
+        <ConfigurationMenu/>
     </UserMenu>
 );
 
 const CustomAppBar = props => {
     const classes = useStyles();
     return (
-        <AppBar {...props} userMenu={<CustomUserMenu />}>
+        <AppBar {...props} userMenu={<CustomUserMenu/>}>
             <Typography
                 variant="h6"
                 color="inherit"
                 className={classes.title}
                 id="react-admin-title"
             />
-            <p>C-RAN环境下的移动边缘计算仿真计算平台</p>
-            <span className={classes.spacer} />
+            <p>Cloud-Radio Access Network(C-RAN)下的移动边缘计算仿真运行及性能计算平台</p>
+            <span className={classes.spacer}/>
         </AppBar>
     );
 };

@@ -18,7 +18,7 @@ export default {
         "bbuPoolNum": 2,
         "mecServerNum": 19,
         "linkNum": 24,
-        "bbuNum": 1
+        "bbuNum": 7
     }, {
         "network_id": 1,
         "des": "网络实例 demo2",
@@ -1530,6 +1530,368 @@ export default {
             "bbuId": null
         }
     ],
+    mecserver: [
+        {
+            "id": 0,
+            "vms": 16,
+            "bandwidth": 97,
+            "cost": 44.0,
+            "memo": 114,
+            "create_by": {
+                "userId": 0,
+                "userName": "tanjin",
+                "authority": 0,
+                "passWord": null,
+                "security1": null,
+                "security2": null,
+                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/petar_prog/128.jpg"
+            },
+            "create_date": "2019-12-03T00:15:31.695+0000",
+            "last_edit": "2019-12-03T15:14:23.333+0000"
+        },
+        {
+            "id": 1,
+            "vms": 7,
+            "bandwidth": 77,
+            "cost": 47.0,
+            "memo": 191,
+            "create_by": {
+                "userId": 0,
+                "userName": "tanjin",
+                "authority": 0,
+                "passWord": null,
+                "security1": null,
+                "security2": null,
+                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/petar_prog/128.jpg"
+            },
+            "create_date": "2019-12-04T02:16:31.343+0000",
+            "last_edit": "2019-12-04T13:35:37.535+0000"
+        },
+        {
+            "id": 2,
+            "vms": 16,
+            "bandwidth": 127,
+            "cost": 41.0,
+            "memo": 198,
+            "create_by": {
+                "userId": 0,
+                "userName": "tanjin",
+                "authority": 0,
+                "passWord": null,
+                "security1": null,
+                "security2": null,
+                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/petar_prog/128.jpg"
+            },
+            "create_date": "2019-12-04T08:19:35.725+0000",
+            "last_edit": "2019-12-04T19:27:31.630+0000"
+        },
+        {
+            "id": 3,
+            "vms": 16,
+            "bandwidth": 145,
+            "cost": 83.0,
+            "memo": 182,
+            "create_by": {
+                "userId": 0,
+                "userName": "tanjin",
+                "authority": 0,
+                "passWord": null,
+                "security1": null,
+                "security2": null,
+                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/petar_prog/128.jpg"
+            },
+            "create_date": "2019-11-30T22:55:32.258+0000",
+            "last_edit": "2019-12-03T14:32:53.784+0000"
+        },
+        {
+            "id": 4,
+            "vms": 16,
+            "bandwidth": 148,
+            "cost": 54.0,
+            "memo": 140,
+            "create_by": {
+                "userId": 0,
+                "userName": "tanjin",
+                "authority": 0,
+                "passWord": null,
+                "security1": null,
+                "security2": null,
+                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/petar_prog/128.jpg"
+            },
+            "create_date": "2019-12-04T18:35:29.555+0000",
+            "last_edit": "2019-12-04T15:40:44.344+0000"
+        },
+        {
+            "id": 5,
+            "vms": 7,
+            "bandwidth": 128,
+            "cost": 99.0,
+            "memo": 116,
+            "create_by": {
+                "userId": 0,
+                "userName": "tanjin",
+                "authority": 0,
+                "passWord": null,
+                "security1": null,
+                "security2": null,
+                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/petar_prog/128.jpg"
+            },
+            "create_date": "2019-12-01T23:15:30.123+0000",
+            "last_edit": "2019-12-05T04:30:23.031+0000"
+        },
+        {
+            "id": 6,
+            "vms": 12,
+            "bandwidth": 67,
+            "cost": 49.0,
+            "memo": 171,
+            "create_by": {
+                "userId": 0,
+                "userName": "tanjin",
+                "authority": 0,
+                "passWord": null,
+                "security1": null,
+                "security2": null,
+                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/petar_prog/128.jpg"
+            },
+            "create_date": "2019-12-03T08:27:32.014+0000",
+            "last_edit": "2019-12-05T10:36:28.147+0000"
+        },
+        {
+            "id": 7,
+            "vms": 14,
+            "bandwidth": 52,
+            "cost": 70.0,
+            "memo": 176,
+            "create_by": {
+                "userId": 0,
+                "userName": "tanjin",
+                "authority": 0,
+                "passWord": null,
+                "security1": null,
+                "security2": null,
+                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/petar_prog/128.jpg"
+            },
+            "create_date": "2019-12-01T09:30:39.888+0000",
+            "last_edit": "2019-12-05T04:51:00.508+0000"
+        },
+        {
+            "id": 8,
+            "vms": 14,
+            "bandwidth": 81,
+            "cost": 51.0,
+            "memo": 184,
+            "create_by": {
+                "userId": 0,
+                "userName": "tanjin",
+                "authority": 0,
+                "passWord": null,
+                "security1": null,
+                "security2": null,
+                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/petar_prog/128.jpg"
+            },
+            "create_date": "2019-12-02T03:51:58.221+0000",
+            "last_edit": "2019-12-04T00:37:12.095+0000"
+        },
+        {
+            "id": 9,
+            "vms": 20,
+            "bandwidth": 109,
+            "cost": 82.0,
+            "memo": 172,
+            "create_by": {
+                "userId": 0,
+                "userName": "tanjin",
+                "authority": 0,
+                "passWord": null,
+                "security1": null,
+                "security2": null,
+                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/petar_prog/128.jpg"
+            },
+            "create_date": "2019-12-05T13:01:49.818+0000",
+            "last_edit": "2019-12-04T04:08:59.537+0000"
+        },
+        {
+            "id": 10,
+            "vms": 15,
+            "bandwidth": 144,
+            "cost": 53.0,
+            "memo": 187,
+            "create_by": {
+                "userId": 0,
+                "userName": "tanjin",
+                "authority": 0,
+                "passWord": null,
+                "security1": null,
+                "security2": null,
+                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/petar_prog/128.jpg"
+            },
+            "create_date": "2019-12-03T02:29:35.418+0000",
+            "last_edit": "2019-12-04T22:32:46.663+0000"
+        },
+        {
+            "id": 11,
+            "vms": 7,
+            "bandwidth": 115,
+            "cost": 56.0,
+            "memo": 184,
+            "create_by": {
+                "userId": 0,
+                "userName": "tanjin",
+                "authority": 0,
+                "passWord": null,
+                "security1": null,
+                "security2": null,
+                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/petar_prog/128.jpg"
+            },
+            "create_date": "2019-12-02T03:41:56.450+0000",
+            "last_edit": "2019-12-03T19:40:19.502+0000"
+        },
+        {
+            "id": 12,
+            "vms": 5,
+            "bandwidth": 105,
+            "cost": 69.0,
+            "memo": 158,
+            "create_by": {
+                "userId": 0,
+                "userName": "tanjin",
+                "authority": 0,
+                "passWord": null,
+                "security1": null,
+                "security2": null,
+                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/petar_prog/128.jpg"
+            },
+            "create_date": "2019-12-03T02:29:48.155+0000",
+            "last_edit": "2019-12-04T13:57:03.082+0000"
+        },
+        {
+            "id": 13,
+            "vms": 13,
+            "bandwidth": 79,
+            "cost": 37.0,
+            "memo": 147,
+            "create_by": {
+                "userId": 0,
+                "userName": "tanjin",
+                "authority": 0,
+                "passWord": null,
+                "security1": null,
+                "security2": null,
+                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/petar_prog/128.jpg"
+            },
+            "create_date": "2019-12-05T05:14:05.332+0000",
+            "last_edit": "2019-12-04T04:24:32.794+0000"
+        },
+        {
+            "id": 14,
+            "vms": 24,
+            "bandwidth": 122,
+            "cost": 68.0,
+            "memo": 177,
+            "create_by": {
+                "userId": 0,
+                "userName": "tanjin",
+                "authority": 0,
+                "passWord": null,
+                "security1": null,
+                "security2": null,
+                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/petar_prog/128.jpg"
+            },
+            "create_date": "2019-12-03T17:43:12.792+0000",
+            "last_edit": "2019-12-04T15:32:45.561+0000"
+        },
+        {
+            "id": 15,
+            "vms": 9,
+            "bandwidth": 113,
+            "cost": 47.0,
+            "memo": 199,
+            "create_by": {
+                "userId": 0,
+                "userName": "tanjin",
+                "authority": 0,
+                "passWord": null,
+                "security1": null,
+                "security2": null,
+                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/petar_prog/128.jpg"
+            },
+            "create_date": "2019-12-01T17:54:49.082+0000",
+            "last_edit": "2019-12-05T01:22:48.932+0000"
+        },
+        {
+            "id": 16,
+            "vms": 8,
+            "bandwidth": 122,
+            "cost": 71.0,
+            "memo": 169,
+            "create_by": {
+                "userId": 0,
+                "userName": "tanjin",
+                "authority": 0,
+                "passWord": null,
+                "security1": null,
+                "security2": null,
+                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/petar_prog/128.jpg"
+            },
+            "create_date": "2019-12-02T14:12:39.199+0000",
+            "last_edit": "2019-12-04T07:28:10.282+0000"
+        },
+        {
+            "id": 17,
+            "vms": 5,
+            "bandwidth": 118,
+            "cost": 34.0,
+            "memo": 120,
+            "create_by": {
+                "userId": 0,
+                "userName": "tanjin",
+                "authority": 0,
+                "passWord": null,
+                "security1": null,
+                "security2": null,
+                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/petar_prog/128.jpg"
+            },
+            "create_date": "2019-12-03T02:31:02.100+0000",
+            "last_edit": "2019-12-04T21:46:55.350+0000"
+        },
+        {
+            "id": 18,
+            "vms": 22,
+            "bandwidth": 67,
+            "cost": 68.0,
+            "memo": 190,
+            "create_by": {
+                "userId": 0,
+                "userName": "tanjin",
+                "authority": 0,
+                "passWord": null,
+                "security1": null,
+                "security2": null,
+                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/petar_prog/128.jpg"
+            },
+            "create_date": "2019-12-03T03:30:35.840+0000",
+            "last_edit": "2019-12-03T17:43:46.300+0000"
+        },
+        {
+            "id": 19,
+            "vms": 6,
+            "bandwidth": 128,
+            "cost": 96.0,
+            "memo": 192,
+            "create_by": {
+                "userId": 0,
+                "userName": "tanjin",
+                "authority": 0,
+                "passWord": null,
+                "security1": null,
+                "security2": null,
+                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/petar_prog/128.jpg"
+            },
+            "create_date": "2019-12-05T06:19:19.768+0000",
+            "last_edit": "2019-12-04T17:53:35.589+0000"
+        }
+    ],
     configs: [
         {
             "create_by": {
@@ -1572,6 +1934,7 @@ export default {
                 "modelType": 0,//0：非既定业务量，1：既定业务量
                 "VoIPRatio": 0.6,//
                 "NoVoIPVelocity": 8.0,//
+                "excel_file": "",
             }
         }
         , {
@@ -1606,6 +1969,8 @@ export default {
                 "modelType": 1,//0：非既定业务量，1：既定业务量
                 "VoIPRatio": 0.6,//
                 "NoVoIPVelocity": 8.0,//
+                "excel_file": "",
+
             }
         }
 

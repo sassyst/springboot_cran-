@@ -6,9 +6,10 @@ import Pie from "recharts/lib/polar/Pie";
 import BarChart from "recharts/lib/chart/BarChart";
 import Bar from "recharts/lib/cartesian/Bar";
 import Cell from "recharts/lib/component/Cell";
-import {CardHeader} from "@material-ui/core";
-import CardContent from "@material-ui/core/CardContent";
-import Card from "@material-ui/core/Card";
+import Table from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
+import TableCell from "@material-ui/core/TableCell";
+import TableRow from "@material-ui/core/TableRow";
 
 const styles = {
     flexColumn: {display: 'flex', flexDirection: 'row', flexWrap: 'wrap'},
@@ -25,12 +26,24 @@ function Performance({tti, run_state}) {
             five: Math.random() * 2,
         }))
     );
-    console.log(randomfive(5, 'five'));
+
+    const basetti = {
+        line:[
+            {
+                tti:0,
+                lastfive:1.957
+            },
+            {
+                tti:1,
+                lastfive:1.462
+            }
+        ]
+    }
 
     function renderLineChart(key, ylabel) {
         return (<LineChart height={300} width={550} data={randomfive(10)}
                            margin={{top: 5, right: 10, bottom: 5, left: 0}}>
-            <Line type="monotone" dataKey={key} stroke="#8884d8"/>
+            <Line type="monotone" dataKey={key} stroke="red"/>
             <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>
             <XAxis dataKey="tti">
                 <Label value="TTI时刻" offset={0} position='insideBottom'/>
@@ -100,47 +113,38 @@ function Performance({tti, run_state}) {
     );
 
     return (
-        <div style={styles.flexColumn}>
-            <div style={styles.singleCol}>
-                <p style={styles.title}>最差5%吞吐量</p>
-                {renderLineChart("five", "吞吐量", "最差5%吞吐量")}
-            </div>
-            <div style={styles.singleCol}>
-                <p style={styles.title}>系统的归一化频谱效率</p>
-                {renderLineChart("pingpuxiaolv", "频谱效率", "系统的归一化频谱效率")}
-
-            </div>
-            <div style={styles.singleCol}>
-                <p style={styles.title}>系统能耗</p>
-                {renderLineChart("systemcost", "能耗", "系统能耗")}
-
-            </div>
-            <div style={styles.singleCol}>
-                <p style={styles.title}>MEC云端服务器成本</p>
-                {renderLineChart("mec", "单位TTI成本", "MEC云端服务器成本")}
-            </div>
-            {/*<div style={styles.singleCol}>*/}
-            {/*    {renderPieChart}*/}
-            {/*</div>*/}
-            <div style={styles.singleCol}>
-                <p style={styles.title}>单个RRU吞吐量</p>
-                {renderBarChart()}
-            </div>
-            <div style={styles.singleCol}>
-                <p style={styles.title}>单个BBU频谱效率</p>
-                {renderBarChart()}
-            </div>
-            <div style={styles.singleCol}>
-                <p style={styles.title}>单个BBU能耗</p>
-                {renderBarChart()}
-            </div>
-            <div style={styles.singleCol}>
-                <Card>
-                    <CardHeader>仿真结果概述</CardHeader>
-                    <CardContent/>
-                </Card>
-            </div>
-        </div>
+        <Table fullWidth>
+            <TableBody>
+                <TableRow>
+                    <TableCell>
+                        <p style={styles.title}>最差5%吞吐量</p>
+                        {renderLineChart("five", "吞吐量", "最差5%吞吐量")}
+                    </TableCell>
+                    <TableCell>
+                        <p style={styles.title}>系统的归一化频谱效率</p>
+                        {renderLineChart("pingpuxiaolv", "频谱效率", "系统的归一化频谱效率")}
+                    </TableCell>
+                    <TableCell>
+                        <p style={styles.title}>系统能耗</p>
+                        {renderLineChart("systemcost", "能耗", "系统能耗")}
+                    </TableCell>
+                </TableRow>
+                <TableRow>
+                    <TableCell>
+                        <p style={styles.title}>MEC云端服务器成本</p>
+                        {renderLineChart("mec", "单位TTI成本", "MEC云端服务器成本")}
+                    </TableCell>
+                    <TableCell>
+                        <p style={styles.title}>单个RRU吞吐量</p>
+                        {renderBarChart()}
+                    </TableCell>
+                    <TableCell>
+                        <p style={styles.title}>单个BBU频谱效率</p>
+                        {renderBarChart()}
+                    </TableCell>
+                </TableRow>
+            </TableBody>
+        </Table>
     );
 }
 

@@ -17,6 +17,8 @@ import bbupools from './bbupools'
 import rrus from './rrus'
 import configs from './configs'
 import Welcome from "./welcome";
+import mecserver from "./mecserver"
+
 const i18nProvider = polyglotI18nProvider(locale => {
     if (locale === 'fr') {
         return import('./i18n/fr').then(messages => messages.default);
@@ -53,8 +55,10 @@ const App = () => {
             <Resource name="ues" {...ues}/>
             <Resource name="rrus" {...rrus}/>
             <Resource name="configs" {...configs}/>
-            <Resource name="wirelesslinkmodel" />
+            <Resource name="wirelesslinkmodel"/>
             <Resource name="bbupools" {...bbupools}/>
+            <Resource name="mecserver" {...mecserver}/>
+
         </Admin>
     );
 };

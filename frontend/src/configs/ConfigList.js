@@ -1,9 +1,19 @@
 import React from 'react';
-import {BooleanField, Datagrid, Filter, List, NullableBooleanInput, SearchInput, TextField} from 'react-admin';
-import ColoredNumberField from "../network/ColoredNumberField";
+import {
+    BooleanField,
+    Datagrid,
+    Filter,
+    List,
+    NullableBooleanInput,
+    NumberField,
+    SearchInput,
+    TextField,
+    DeleteButton
+} from 'react-admin';
 import {makeStyles} from "@material-ui/core";
+import ConfigShow from "./configShow";
 
-const VisitorFilter = props => (
+const ConfigFilter = props => (
     <Filter {...props}>
         <SearchInput source="create_by.userName" alwaysOn/>
         <NullableBooleanInput source="supportMec"/>
@@ -19,10 +29,11 @@ const ConfigList = props => {
         <List
             {...props}
             sort={{field: 'id', order: 'DESC'}}
+            filters={<ConfigFilter />}
             perPage={5}
         >
-            <Datagrid optimized rowClick="edit">
-                <ColoredNumberField
+            <Datagrid rowClick="expand" expand={<ConfigShow/>}>
+                <NumberField
                     source="id"
                     label="编号"
                 />
@@ -31,13 +42,9 @@ const ConfigList = props => {
                     source="moveModel.kindDisplay"
                     label="用户移动模型"
                 />
-                {/*<BooleanField*/}
-                {/*    source="isActivity"*/}
-                {/*    label="用户活跃"*/}
-                {/*/>*/}
                 <BooleanField
-                    source="supportMec"
-                    label="MEC支持"
+                    source="isActivity"
+                    label="用户活跃"
                 />
                 <TextField
                     source="WirelessLinkModel.typeDisplay"
@@ -51,6 +58,11 @@ const ConfigList = props => {
                     source="ueTrafficModel.typeDisplay"
                     label="业务量模型"
                 />
+                <BooleanField
+                    source="supportMec"
+                    label="MEC支持"
+                />
+                <DeleteButton/>
             </Datagrid>
         </List>
     );
